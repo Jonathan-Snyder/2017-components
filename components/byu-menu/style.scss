@@ -30,7 +30,7 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
 
 .inner-nav {
     width: 100%;
-    display:table;
+    display: table;
 }
 
 .navbar-collapse {
@@ -81,12 +81,12 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
     cursor: pointer;
 }
 
-::slotted(*) {
+.extra-links, ::slotted(*) {
     display: table;
     width: 16.66%;
 }
 
-::slotted(*.selected) {
+.extra-links, ::slotted(*.selected) {
     background: $active_color !important;
 }
 
@@ -101,7 +101,6 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
     text-decoration: none !important;
     vertical-align: middle !important;
     text-align: center !important;
-    padding: 0 6px !important;
 }
 
 .extra-links:hover, ::slotted(*:hover) {
@@ -109,23 +108,52 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
 }
 
 .extra-links {
-
     display: none;
     cursor: pointer;
 
     .extra-links-dropdown {
         display: none;
-        position:absolute;
-        background-color: white;
+        position: absolute;
+        background-color: #fff;
         z-index: 10;
-        min-width: 115px;
-        margin-top:10px;
-
-        // display: block;
+        min-width: 16%;
+        margin-top: 11px;
 
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
+
+            -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
+            -moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
+            box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
+
+            -webkit-transition-timing-function: ease;
+            -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+
+            -webkit-transition-duration: .35s;
+            -o-transition-duration: .35s;
+            transition-duration: .35s;
+
+            -webkit-transition-property: height;
+            -o-transition-property: height;
+            transition-property: height;
+
+            li {
+                line-height: $menu_height;
+
+                .selected {
+                    background: $active_color !important;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+            }
+
+            li:hover {
+                background-color: $hover_color;
+            }
         }
     }
 
@@ -134,7 +162,10 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
     }
 }
 
-
+#extraLinksDropdown a {
+    text-decoration: none !important;
+    color: $byu_blue;
+}
 
 
 @media (min-width: 1024px) {

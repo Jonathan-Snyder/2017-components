@@ -55,11 +55,14 @@
                     listItem.appendChild(allLinks[i]);
                     dropdown.appendChild(listItem);
                 }
+
+                // dynamically set the height of the extraLinksDropdown menu
+                dropdown.style.height = (allLinks.length * 35) + "px;";
             }
 
             //dynamically set the height of the mobile dropdown based on the number of links
             var styleSheet = this.shadowRoot.querySelector("#stylePlaceHolder");
-            styleSheet.innerHTML = "<style>.navbar-collapse { height: " + h + "px }</style>";
+            styleSheet.innerHTML = "<style>.navbar-collapse { height: " + h + "px; }</style>";
         }
     }
 
