@@ -14,7 +14,7 @@
     window.customElements.define('byu-header', BYUHeader);
     window.BYUHeader = BYUHeader;
 
-})(`<style>
+})(`<style type="text/css">
     /*Variables*/
 .byu-header {
   font-family: "Vitesee Book";
