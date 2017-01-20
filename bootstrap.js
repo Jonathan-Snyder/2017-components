@@ -5,13 +5,14 @@ try {
     // new Function("(a = 0) => a");
     // var myFunc = new Function("class foo { }"); myFunc();'
     // eval("var foo = (x)=>x+1");
-    
-    // Is ES6 Compatible
+    new Function('class {}');
+
+    // Is ES6 compatible
     loadScript("dist/components.js");
 }
 catch (e) {
     // load polyfills
-    // Is not ES6 Compatible
+    // Is not ES6 compatible
     loadScript("dist/components-and-polyfills.es5.min.js");
 }
 
