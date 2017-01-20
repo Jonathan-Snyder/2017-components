@@ -14,7 +14,7 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
     border-bottom: 1px solid #ccc;
 }
 
-:host([collapsed]) .navbar-collapse {
+:host([collapsed="true"]) .navbar-collapse {
     height: 0;
 }
 

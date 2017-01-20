@@ -7,14 +7,15 @@
         }
 
         get collapsed() {
-            return this.hasAttribute('collapsed');
+            if (this.hasAttribute('collapsed'))
+                return this.getAttribute('collapsed');
         }
 
         set collapsed(val) {
             if (val)
-                this.setAttribute('collapsed', '');
+                this.setAttribute('collapsed', 'true');
             else
-                this.removeAttribute('collapsed');
+                this.setAttribute('collapsed', 'false');
         }
 
         constructor() {
@@ -23,8 +24,7 @@
             shadowRoot.innerHTML = template;
         }
 
-        attributeChangedCallback(name, oldValue, newValue) {
-        }
+        attributeChangedCallback(name, oldValue, newValue) { }
 
         connectedCallback() {
             // if there are more than 6 links add the extras to a "more" dropdown
