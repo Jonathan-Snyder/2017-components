@@ -1,10 +1,8 @@
 /*Variables*/
 $menu_height: 35px;
 $byu_blue: #002e5d;
-$hover_color: #c5c5c5;
-$active_color: #e6e6e6;
-$light_gray: #e5e5e5;
-$med_gray: #CCCCCC;
+$light_gray: #e6e6e6;
+$med_gray: #C5C5C5;
 $dark_gray: #767676;
 $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
 
@@ -64,6 +62,7 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
     margin: 0 -15px;
 }
 
+.inner-nav > a,
 .secondary-nav > a {
     font-family: $menu_font;
     font-size: 13px;
@@ -78,25 +77,38 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
     line-height: 12px;
     text-decoration: none;
 }
-
-.secondary-nav > a:hover {
+.inner-nav > a:hover {
     background-color: $med_gray;
     cursor: pointer;
 }
-
+.inner-nav > a:active,
 .secondary-nav > a:active {
     background-color: $light_gray;
     color: #fff;
     cursor: pointer;
 }
-
+.secondary-nav a {
+    padding-right: 15px;
+}
+.secondary-nav:first-child {
+    border-bottom: 1px solid $med_gray;
+}
+.secondary-nav:first-child a {  // might have to set this in byu-header script.js when creating frist row
+    padding-right: 5px;
+}
+.secondary-nav:first-child {
+    background: $light_gray;
+}
+.secondary-nav:first-child(.action-link) {
+    border-top: 1px solid $med_gray;
+}
 ::slotted(*) {
     display: table;
     width: 16.66%;
 }
 
 ::slotted(*.selected) {
-    background: $active_color !important;
+    background: $light_gray !important;
 }
 
 .extra-links, ::slotted(*) {
@@ -114,7 +126,7 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
 }
 
 .extra-links:hover, ::slotted(*:hover) {
-    background-color: $hover_color !important;
+    background-color: $med_gray !important;
 }
 
 .extra-links {

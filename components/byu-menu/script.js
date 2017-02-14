@@ -31,13 +31,18 @@
             const slot = this.shadowRoot.querySelector("#slot");
 
             var allLinks = slot.assignedNodes().filter(function (element) { return element instanceof HTMLElement });
-            
+
+
             
             // create the secondary nav links
             for (var i = 0; i < allLinks.length; i++) {
                 var cln = allLinks[i].cloneNode(true);
                 this.shadowRoot.querySelector('.secondary-nav').appendChild(cln);
             }
+            // add the action item links
+
+
+            // then append links to secondary-nav
 
             // calculate the height of the mobile dropdown
             var h = allLinks.length * 48;
