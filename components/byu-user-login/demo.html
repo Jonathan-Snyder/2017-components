@@ -43,7 +43,13 @@
     <demo-snippet>
         <template>
             <div class="fake-header">
-                <byu-user-login login-url="#login"></byu-user-login>
+                <byu-user-login>
+                <div id="login" name="login" login-url="#login"></div>
+                <!-- Only if they are logged in, provide a value for the div with name="username" -->
+                <div id="username" name="username" myaccount-url="#user">MyNetid</div>
+
+                <div id="logout" name="logout" logout-url="#logout"></div>
+                </byu-user-login>
             </div>
         </template>
     </demo-snippet>
@@ -52,7 +58,13 @@
     <demo-snippet>
         <template>
             <div class="fake-header">
-                <byu-user-login><a href="#hi">Sign In</a></byu-user-login>
+                <byu-user-login>
+                    <a id="login" name="login" href="#hi">Sign In</a>
+                    <!-- Only if they are logged in, provide a value for the div with name="username" -->
+                    <a id="username" name="username" href="../user">MyNetid</a>
+
+                    <a id="logout" name="logout" href="#hi">Sign Out</a>
+                </byu-user-login>
             </div>
         </template>
     </demo-snippet>
@@ -62,6 +74,15 @@
         <template>
             <div class="fake-header">
                 <byu-user-login onclick="alert('Clicked Login!')"></byu-user-login>
+                <!-- Only if they are logged in, provide a value for the div with name="username" -->
+
+                <byu-user-login>
+                    <div id="login" name="login" onclick="alert('Clicked Login!')">Sign In</div>
+                    <!-- Only if they are logged in, provide a value for the div with name="username" -->
+                    <div id="username" name="username" onclick="alert('Clicked MyAccount Link!')">MyNetid</div>
+
+                    <div id="logout" name="logout"onclick="alert('Clicked Logout!')">Sign Out</div>
+                </byu-user-login>
 </div>
 </template>
 </demo-snippet>

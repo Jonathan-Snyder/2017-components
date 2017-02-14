@@ -3,11 +3,18 @@
 </style>
 <div>
     <img class="icon" src="images/user.svg">
-    <slot id="sign-in">
+    <slot id="login" name="login">
         <a class="link">
             <span class="text">Sign In</span>
             <img class="icon" src="../img/user.svg">
         </a>
+    </slot>
+    <slot id="username" name="username">
+
+    </slot>
+    <img class="icon" src="images/user-sign-out.svg">
+    <slot id="logout" name="logout">
+
     </slot>
 
     <slot id="delegate" style="display: none;" hidden></slot>
