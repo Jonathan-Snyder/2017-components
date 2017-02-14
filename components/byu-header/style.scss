@@ -104,7 +104,7 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
     }
 }
 
-/* FULL SIZE */
+/* FULL SIZE - including tablet landscape */
 
 @media (min-width: 1024px) {
     .byu-header {
@@ -161,7 +161,7 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
         }
     }
 }
-/* TABLET SIZE */
+/* TABLET PORTRAIT SIZE */
 
 @media (max-width: 1023px) {
     .byu-header {
@@ -209,6 +209,9 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
                     border-left: none;
                     width: 50px;
                 }
+            }
+            .byu-header-actions {
+                display: none;
             }
             .byu-header-user {
                 .label {
