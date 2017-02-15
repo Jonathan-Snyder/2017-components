@@ -18,7 +18,9 @@ $menu_font: "Gotham A", "Gotham B", Helvetica, sans-serif;
 :host([collapsed]) .navbar-collapse {
     height: 0;
 }
-
+:host([transparent]) .outer-nav {
+    background: rgba(255,255,255,0.88);
+}
 .outer-nav {
     display: flex;
     flex-direction: row;
